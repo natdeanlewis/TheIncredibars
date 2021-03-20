@@ -3,7 +3,6 @@ function validateForm() {
     
     if (x.toLowerCase()=="kronos") {
         changeTo("white");
-        fromPassword=true;
     } else {
         colors = ["red", "black"];
         // for (i = 0; i <= 5; i++) {
