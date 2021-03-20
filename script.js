@@ -1,5 +1,3 @@
-var fromPassword="false";
-
 function validateForm() {
     var x = document.forms["password-form"]["password"].value;
     
