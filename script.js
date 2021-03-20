@@ -22,25 +22,9 @@ function validateForm() {
                 changeTo(colors[1]);
             }, gap * (1 + 2 * i));
         }
-
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },300);
-        // setTimeout(function() {
-        //     changeTo("red");
-        // },600);
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },900);
-        // setTimeout(function() {
-        //     changeTo("red");
-        // },1200);
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },1500);
     }
     return (x.toLowerCase()=="kronos");
-  }
+}
 
 function changeTo(c) {
     document.getElementById("password").style.color = c;
@@ -56,7 +40,6 @@ function toggle() {
 }
 
 function mouseOver(c) {
-    console.log(c);
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = "white";
@@ -66,7 +49,6 @@ function mouseOver(c) {
 }
 
 function mouseOut(c) {
-    console.log(c);
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = 'black';
