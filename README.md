@@ -2,4 +2,6 @@
 
 https://natdeanlewis.github.io/TheIncredibars
 
-Protein bar ranking tool in the style of The Incredibles' Operation Kronos.
+Protein bar ranking website in the style of The Incredibles' Operation Kronos.
+
+Termination Centre WIP
