@@ -44,7 +44,8 @@ function validateForm() {
         }
     }
     return (x.toLowerCase()=="kronos" && attempts > 0);
-  }
+}
+
 
 function showImg() {
 
