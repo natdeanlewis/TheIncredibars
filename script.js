@@ -1,9 +1,13 @@
+var attempts = 3;
 function validateForm() {
     var x = document.forms["password-form"]["password"].value;
-    
-    if (x.toLowerCase()=="kronos") {
+    console.log(attempts);
+    if (x.toLowerCase()=="kronos" && (attempts>0)) {
         changeTo("white");
     } else {
+        if (attempts > 0) {
+            attempts -= 1;
+        }
         colors = ["red", "black"];
         // for (i = 0; i <= 5; i++) {
         //     setTimeout(function() {
@@ -23,24 +27,28 @@ function validateForm() {
             }, gap * (1 + 2 * i));
         }
 
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },300);
-        // setTimeout(function() {
-        //     changeTo("red");
-        // },600);
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },900);
-        // setTimeout(function() {
-        //     changeTo("red");
-        // },1200);
-        // setTimeout(function() {
-        //     changeTo("black");
-        // },1500);
+        var message = `WARNING: ${attempts} attempts remaining before self-destruct.`
+        switch (attempts) {
+            case 1: 
+                message = "WARNING: 1 attempt remaining before self-destruct.";
+                break;
+            case 0:
+                message = "Self-destruct sequence initiated.";
+                break;
+        }
+        document.getElementById("error-message").innerHTML = message;
+        if (attempts == 0) {
+            selfDestructAudio = document.getElementById("self-destruct");
+            selfDestructAudio.play();
+            setTimeout(showImg, 17500)
+        }
     }
-    return (x.toLowerCase()=="kronos");
+    return (x.toLowerCase()=="kronos" && attempts > 0);
   }
+
+function showImg() {
+
+}
 
 function changeTo(c) {
     document.getElementById("password").style.color = c;
@@ -56,17 +64,20 @@ function toggle() {
 }
 
 function mouseOver(c) {
-    console.log(c);
+    var images = document.getElementById("icon"+c.slice(-1));
+    images.style.filter = "invert(1)";
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = "white";
         all[i].style.backgroundColor = "#97ADAE";
+
     }
     
 }
 
 function mouseOut(c) {
-    console.log(c);
+    var images = document.getElementById("icon"+c.slice(-1));
+    images.style.filter = "invert(0)";
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = 'black';
