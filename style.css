@@ -264,3 +264,13 @@ a {
 .large {
   font-size: 1.2em;
 }
+
+.error-message {
+  margin: 10%;
+}
+
+#signal-loss {
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
