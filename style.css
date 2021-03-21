@@ -264,3 +264,7 @@ a {
 .large {
   font-size: 1.2em;
 }
+
+.error-message {
+  padding-top: 10%;
+}
