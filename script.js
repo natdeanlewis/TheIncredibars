@@ -44,7 +44,12 @@ function validateForm() {
         }
     }
     return (x.toLowerCase()=="kronos" && attempts > 0);
-  }
+}
+            setTimeout(showImg, 17500)
+        }
+    }
+    return (x.toLowerCase()=="kronos" && attempts > 0);
+}
 
 function selfDestruct() {
     alert("You died. Reincarnating...");
