@@ -266,11 +266,6 @@ a {
 }
 
 .error-message {
+  padding-top: 10%;
   margin: 10%;
-}
-
-#signal-loss {
-  height: 100%;
-  width: 100%;
-  z-index: -10;
 }

@@ -40,15 +40,20 @@ function validateForm() {
         if (attempts == 0) {
             selfDestructAudio = document.getElementById("self-destruct");
             selfDestructAudio.play();
+            setTimeout(selfDestruct, 17500);
+        }
+    }
+    return (x.toLowerCase()=="kronos" && attempts > 0);
+}
             setTimeout(showImg, 17500)
         }
     }
     return (x.toLowerCase()=="kronos" && attempts > 0);
 }
 
-
-function showImg() {
-
+function selfDestruct() {
+    alert("You died. Reincarnating...");
+    location.reload()
 }
 
 function changeTo(c) {
