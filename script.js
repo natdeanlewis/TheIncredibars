@@ -53,7 +53,7 @@ function validateForm() {
 
 function selfDestruct() {
     alert("You died. Reincarnating...");
-    location.reload()
+    location.reload();
 }
 
 function changeTo(c) {
