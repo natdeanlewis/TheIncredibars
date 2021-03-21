@@ -45,11 +45,6 @@ function validateForm() {
     }
     return (x.toLowerCase()=="kronos" && attempts > 0);
 }
-            setTimeout(showImg, 17500)
-        }
-    }
-    return (x.toLowerCase()=="kronos" && attempts > 0);
-}
 
 function selfDestruct() {
     alert("You died. Reincarnating...");
@@ -70,23 +65,30 @@ function toggle() {
 }
 
 function mouseOver(c) {
-    var images = document.getElementById("icon"+c.slice(-1));
-    images.style.filter = "invert(1)";
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = "white";
         all[i].style.backgroundColor = "#97ADAE";
-
     }
     
 }
 
 function mouseOut(c) {
-    var images = document.getElementById("icon"+c.slice(-1));
-    images.style.filter = "invert(0)";
+
     var all = document.getElementsByClassName(c);
     for (var i = 0; i < all.length; i++) {
         all[i].style.color = 'black';
         all[i].style.backgroundColor = "transparent";
     }
+}
+
+function mouseOverInvert(c) {
+    var images = document.getElementById("icon"+c.slice(-1));
+    images.style.filter = "invert(1)";
+}
+
+
+function mouseOutInvert(c) {
+    var images = document.getElementById("icon"+c.slice(-1));
+    images.style.filter = "invert(0)";
 }
